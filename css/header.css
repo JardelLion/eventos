@@ -23,13 +23,14 @@ nav ul li:last-child {
     height: 30px;
     line-height: 30px;
     border-radius: 2px;
-    background-color: aqua;
+    background-color: #46d09e;
     text-align: center;
 }
 
 nav ul li a {
     text-decoration: none;
     text-transform: uppercase;
+    color: #000;
 }
 
 .box {
