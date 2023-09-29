@@ -1,0 +1,87 @@
+.box {
+    flex-direction: row;
+   
+}
+
+.box div:first-child {
+    display: block;
+    width: auto;
+
+}
+
+.space {
+    margin: 0 8px;
+}
+
+
+select {
+    display: block;
+    width: 100%;
+    border: 2px solid rgb(207, 198, 198);
+    padding: 6px 0;
+    border-radius: 2px;
+    text-indent: 5px;
+
+}
+
+textarea {
+    display: block;
+    width: 100%;
+    height: 165px;
+   
+    border: 2px solid rgb(207, 198, 198);
+}
+
+
+
+.box button  {
+    position: relative;
+    width: 100%;
+    margin: 0;
+    padding: 8px 6px;
+    text-align: center;
+    font-weight: bold;
+    max-width: 100%;
+
+}
+
+
+
+.box-border {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 40px;
+    border: 2px solid gray;
+    box-shadow: -3px -4px 10px #cfc8c8;
+    height: 56px;
+}
+
+
+
+@media (max-width:650px){
+    .box-border {
+        flex-direction: column;
+        height: 100%;
+    }
+    .box-border > div:first-child {
+        padding-top: 5px;
+    }
+
+    .box-border > div:first-child,
+    .box-border div {
+        width: 90%;
+        margin: 8px auto;
+    }
+
+
+
+    .box-time {
+        display: flex;
+        flex-direction: column;
+    }
+
+
+    textarea {
+        height: 222px;
+    }
+}

@@ -1,0 +1,54 @@
+body {
+    width: 100%;
+    margin: 0 auto;
+    
+}
+
+.form-login {
+    margin: 0 auto;
+    margin-top: 14%;
+
+}
+.form-login__btn,
+.form-login input {
+    display: block;
+    margin: 5px auto;
+    width: 30%;
+    min-width: 300px;
+    padding: 9px 0;
+    border-radius: 2px;
+    background-color: rgb(228, 223, 223);
+}
+
+.form-login input::placeholder {
+    text-indent: 6px;
+}
+
+.form-login__btn {
+    background-color: rgb(31, 221, 100);
+    padding: 8px 0px;
+    margin-top: 50px;
+    width: 20%;
+    min-width: 150px;
+    font-size: 14px;
+    text-transform: uppercase;
+
+}
+
+
+.forget-password {
+    display: block;
+    text-align: center;
+    margin-top: 32px;
+}
+
+.forget-password a {
+    text-decoration: none;
+    color: #000;
+}
+
+
+
+.title-passe {
+    text-align: center;
+}

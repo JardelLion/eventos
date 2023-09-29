@@ -1,0 +1,23 @@
+.form-nova_passe {
+    margin: 0 auto;
+    margin-top: 14%;
+}
+
+.form-nova_passe input {
+    display: block;
+    margin: 5px auto;
+    width: 30%;
+    min-width: 300px;
+    padding: 9px 0;
+    border-radius: 2px;
+    background-color: rgb(228, 223, 223);
+}
+
+.form-nova_passe input::placeholder {
+    text-indent: 6px;
+}
+
+.title-passe {
+    font-size: 16px;
+    font-weight: normal;
+}

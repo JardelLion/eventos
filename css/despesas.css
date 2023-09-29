@@ -1,0 +1,73 @@
+.main-content__box .box__green {
+    color: transparent !important;
+}
+
+.box__info {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.box__date {
+    margin-right: 6px;
+}
+
+.box__calendar {
+    display: flex;
+    flex-direction: row;
+}
+
+
+.box__calendar div {
+    width: 90px;
+    text-align: center;
+    background-color: #46d09e;
+    padding: 6px 4px;
+    margin: 8px 12px ;
+    
+}
+
+.box__calendar div p {
+    font-size: 14px;
+    font-weight: bolder;
+}
+
+.box__calendar {
+    margin: 4px 8px;
+    
+   
+    box-shadow: 3px 4px 10px #cfc8c8;
+    border-radius: 4px;
+    padding: 6px 18px;
+    
+}
+
+
+
+.box__calendar:last-child div {
+
+    width: 30px;
+    padding: 6px;
+    margin: 8px 4px;
+
+}
+
+
+.box_border__calendar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+@media (max-width: 705px){
+    .box_border__calendar {
+        flex-direction: column;
+    }
+}
+
+
+
+.box__calendar.box__calendar:last-child {
+    padding: 6px 18px;
+    
+}

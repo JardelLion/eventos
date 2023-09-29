@@ -1,0 +1,35 @@
+/*GLOBAL*/
+
+:root {
+    --main-color: #46d09e;
+    --secondary-color: #d9d9d9;
+}
+
+/*cadastrar cliente*/
+.box__green {
+    background-color: var(--main-color);
+}
+.box button {
+    background-color: var(--main-color);
+    cursor: pointer;
+}
+.box .btn-dados {
+    background-color: var(--secondary-color);
+}
+.box__info,
+.box__title {
+    background-color: var(--secondary-color);
+
+}
+
+
+
+.form-login__btn {
+    background-color: var(--main-color);
+}
+
+
+.form-login input,
+.form-nova_passe input {
+    background-color: var(--secondary-color);
+}

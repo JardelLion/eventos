@@ -1,0 +1,113 @@
+
+.calendar {
+    max-width: 600px;
+    margin: 0 auto;
+    
+    font-family: Arial, sans-serif;
+    margin-top: 50px;
+}
+
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.prev-month, .next-month {
+    cursor: pointer;
+    font-size: 24px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 2px solid #f7f6f6;
+   
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+}
+
+td {
+    padding-top: 30px;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+td:hover {
+    background-color: #e0e0e0;
+}
+
+
+.content-image {
+    width: 100%;
+    margin: 0 auto;
+    height: 120px;
+    background-color: gray;
+    margin-top: 118px;
+}
+
+
+.box-home {
+    display: flex;
+    justify-content: space-between;
+    margin: 16px 0;
+}
+
+
+@media (max-width:800px){
+    .box-home {
+        flex-direction: column;
+    }
+
+    .box-home .box-s {
+        margin: 8px 0;
+    }
+}
+
+.box-home .box-s {
+    width: 100%;
+    margin: 0px 4px;
+}
+
+
+
+.month-label {
+    text-transform: uppercase;
+    font-size: 24px;
+}
+
+.box-home--end {
+    flex-direction: column;
+    margin: 18px 0;
+}
+
+
+.box-home--end .box-s {
+    
+    margin: 4px 0;
+
+
+}
+.box__green,
+.box__title {
+    margin: 4px 0;
+}
+.number,
+.text {
+    text-align: center;
+    margin: 4px 0;
+    padding: 3px;
+}
+
+.text {
+    text-align: left;
+}

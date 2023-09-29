@@ -1,0 +1,39 @@
+.box__green {
+    text-align: center;
+    padding: 3px 0;
+}
+
+.main-content__box .box__title {
+    text-transform: capitalize;
+}
+
+main {
+    margin-top: 10%;
+}
+
+main > .box {
+    margin-bottom: 50px;
+}
+
+.main-content__box .box {
+    margin-top: 12px;
+}
+
+.main-content__box .box__green {
+    width: 45px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
