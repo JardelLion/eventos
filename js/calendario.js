@@ -3,8 +3,16 @@ const nextMonthButton = document.querySelector('.next-month');
 const currentMonthDisplay = document.getElementById('current-month');
 const calendarBody = document.getElementById('calendar-body');
 
+const weekDaysRow = document.getElementById('weekdays-row')
+
+//pegar a data do sistema
+const dataAtual = new Date();
+const anoAtual = dataAtual.getFullYear() 
+const mesAtual = dataAtual.getMonth();
+
+
 // Definir a data inicial
-let currentDate = new Date(2023, 0); // Janeiro de 2023 (os meses sao baseados em zero)
+let currentDate = new Date(anoAtual, mesAtual); // Janeiro de 2023 (os meses sao baseados em zero)
 
 // Funcao para gerar dinamicamente os dias do mes no corpo do calendario
 function generateCalendar() {
@@ -14,43 +22,76 @@ function generateCalendar() {
     currentMonthDisplay.textContent = new Intl.DateTimeFormat('pt-BR', { year: 'numeric', month: 'long' }).format(currentDate);
 
     let day = new Date(firstDayOfMonth);
+    let row = document.createElement('tr');
+    
+    const today = currentDate.getDate();
 
-    // Limpa o conteudo anterior do calendario
-    calendarBody.innerHTML = '';
+    // funcao para obter os nomes dos dias da semana baseados no mes atual
+
+    function getWeekdays(){
+        
+        const weekdays = [
+            'Domingo','Segunda','Terca',
+            'Quarta','Quinta','Sexta','Sabado'
+        ]
+        
+        const firstDayOfWeek = firstDayOfMonth.getDay();
+        return weekdays.slice(firstDayOfWeek).concat(weekdays.slice(0, firstDayOfWeek));
+    }
+
+   
+    
+    const weekdays = getWeekdays();
+
+
+    weekDaysRow.innerHTML = '';
+    // Preenche os nomes dos dias da semana
+    for (const weekday of weekdays){
+        const th = document.createElement('th');
+        th.textContent = weekday;
+        weekDaysRow.appendChild(th);
+    }
+
+     // Limpa o conteudo anterior do calendario
+     calendarBody.innerHTML = '';
+    
+
+    
 
     while (day <= lastDayOfMonth) {
         const row = document.createElement('tr');
-
+    
+        
         for (let i = 0; i < 7; i++) {
             const cell = document.createElement('td');
-            cell.textContent = day.getDate();
+            cell.style.width = '30px'; /* Largura reduzida das celulas */
+            cell.style.height = '60px'; /* Altura das celulas */
+            cell.style.position = 'relative'; /* Garante que a posiaoo seja relativa */
+            cell.style.margin = '0'; /* Zere as margens para evitar duplicao de espa�amento */
+            cell.style.borderRadius = '3px'; /* Arredondamento das bordas */
 
-            // Destaque o dia atual
-            if (day.toDateString() === new Date().toDateString()) {
+            const span = document.createElement('span');
+            span.textContent = day.getDate();
+            span.style.fontSize = '12px';
+            span.style.padding = '3px';
+            span.style.margin = '0'; /* Zere as margens para evitar duplicao de espa�amento */
+
+            cell.appendChild(span);
+            
+            
+            if (day.getDate() === today && day.getMonth() === currentDate.getMonth()) {
                 cell.classList.add('current-day');
-            }
-
-		
-		// Estiliza todos os dias do mes atual com a cor cinza
-            if (day.getMonth() === currentDate.getMonth()) {
-                cell.style.backgroundColor = '#d9d9d9';
-            }
-            else {
-                cell.style.backgroundColor = '#f0f0f0';
-            }
-
-
-// Estiliza o dia atual com a cor verde
-            if (day.toDateString() === currentDate.toDateString()) {
-                cell.classList.add('current-day');
-                cell.style.color = 'green'; // Define a cor verde
             }
 
             row.appendChild(cell);
+            
             day.setDate(day.getDate() + 1);
+            
         }
 
         calendarBody.appendChild(row);
+        
+
     }
 
     // Adicionar evento de clique para o dia 1 do proximo mes
