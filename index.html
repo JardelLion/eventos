@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
     <link rel="stylesheet" href="./css/reset.css">
-    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="./css/registar-despesa.css">
     <link rel="stylesheet" href="./css/cadastrar-cliente.css">
-    <link rel="stylesheet" href="./css/home.css">
+    
     <link rel="stylesheet" href="./css/style.css">
     
 
@@ -17,7 +17,7 @@
     <header>
         <nav>
             <ul>
-                <li><a href="./definicoes.html">
+                <li><a href="definicoes.html">
                     <svg xmlns="http://www.w3.org/2000/svg" 
                     width="24px",
                     height='24px',
@@ -73,30 +73,43 @@
 
 
         <div class="calendar">
-            <div class="calendar-header">
-                <span class="prev-month">
-                    <svg xmlns="http://www.w3.org/2000/svg"
-                        width="24px",
-                        height='24px',
-                        viewBox="0 0 448 512"><!--! Font Awesome Free 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc. --><path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/>
-                    </svg>
-                    
-                </span>
-                <h1 id="current-month" class="month-label">Janeiro 2023</h1>
-                <span class="next-month">
-                    <svg xmlns="http://www.w3.org/2000/svg" 
-                    width="24px",
-                    height='24px',
-                    viewBox="0 0 448 512"><!--! Font Awesome Free 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc. --><path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/>
-                    </svg>
-                </span>
-            </div>
-            <table>
+          
+            <div class="border">
+                <table>
                 
-                <tbody id="calendar-body">
-                    <!-- Aqui voce pode adicionar dinamicamente os dias do mes -->
-                </tbody>
-            </table>
+                    <div class="calendar-header">
+                        <span class="prev-month">
+                            <svg xmlns="http://www.w3.org/2000/svg"
+                                width="24px",
+                                height='24px',
+                                fill="#fff",
+                                class="svg-icon",
+                                viewBox="0 0 448 512"><!--! Font Awesome Free 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc. --><path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/>
+                            </svg>
+                            
+                        </span>
+                        <h1 id="current-month" class="month-label">Janeiro 2023</h1>
+        
+                        <span class="next-month">
+                            <svg xmlns="http://www.w3.org/2000/svg" 
+                            width="24px",
+                            height='24px',
+                            fill="#fff",
+                            class="svg-icon"
+                            viewBox="0 0 448 512"><!--! Font Awesome Free 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc. --><path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/>
+                            </svg>
+                        </span>
+                    </div>
+                    <tr id="weekdays-row" class="weekdays-row">
+                        <!--Nomes dos dias da semana serao apresentados aqui-->
+                    </tr>
+                    
+                    <tbody id="calendar-body">
+                       
+                        <!-- Aqui voce pode adicionar dinamicamente os dias do mes -->
+                    </tbody>
+                </table>
+            </div>
         </div>
 
 
@@ -120,5 +133,6 @@
     </main>
     
 </body>
+<link rel="stylesheet" href="css/home.css">
 <script src="./js/calendario.js"></script>
 </html>
